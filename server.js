@@ -20,7 +20,11 @@ const PORT = process.env.PORT || 8000;
 connectDB();
 
 // middleware
-app.use(helmet());
+app.use(
+  helmet({
+    crossOriginResourcePolicy: false,
+  })
+);
 app.use(cors({
   origin: "http://localhost:3000",
   credentials: true,

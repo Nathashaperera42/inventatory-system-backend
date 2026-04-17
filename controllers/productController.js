@@ -1,7 +1,7 @@
 import Product from "../models/Product.js";
 import path from "path";
 
-// CREATE
+// Create
 export const createProduct = async (req, res) => {
   try {
     const productData = {
@@ -16,7 +16,7 @@ export const createProduct = async (req, res) => {
   }
 };
 
-// READ ALL
+// read all
 export const getProducts = async (req, res) => {
   try {
     const products = await Product.find();
@@ -26,7 +26,7 @@ export const getProducts = async (req, res) => {
   }
 };
 
-// UPDATE
+// Update
 export const updateProduct = async (req, res) => {
   try {
     const productData = {
@@ -40,7 +40,7 @@ export const updateProduct = async (req, res) => {
   }
 };
 
-// DELETE
+// Delete
 export const deleteProduct = async (req, res) => {
   try {
     await Product.findByIdAndDelete(req.params.id);
